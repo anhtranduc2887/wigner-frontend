@@ -128,20 +128,6 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="thanh-vien-wrap">
-          <div className="thanh-vien-title">📋 Danh Sách Thành Viên Nhóm</div>
-          <div className="thanh-vien-grid">
-            {THONG_TIN_NHOM.thanhVien.map((tv, i) => (
-              <div key={tv.mssv} className="thanh-vien-card">
-                <span className="tv-so">{String(i + 1).padStart(2, '0')}</span>
-                <div className="tv-info">
-                  <div className="tv-ten">{tv.hoTen}</div>
-                  <div className="tv-mssv">MSSV: {tv.mssv}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </header>
 
       <main className="main">
@@ -261,6 +247,19 @@ function App() {
             </div>
           </>
         )}
+
+        <section className="section">
+          <h2 className="section-title">👥 Danh Sách Thành Viên Nhóm</h2>
+          <div className="thanh-vien-list">
+            {THONG_TIN_NHOM.thanhVien.map((tv, i) => (
+              <div key={tv.mssv} className="thanh-vien-row">
+                <span className="tv-so">{String(i + 1).padStart(2, '0')}</span>
+                <span className="tv-ten">{tv.hoTen}</span>
+                <span className="tv-mssv">MSSV: {tv.mssv}</span>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <footer className="footer">
