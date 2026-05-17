@@ -98,8 +98,10 @@ function App() {
 
       <header className="header">
         <div className="header-top">
-          <div className="badge-truong">ĐẠI HỌC CÔNG NGHỆ THÔNG TIN – ĐHQG TP.HCM</div>
-          <div className="badge-mon">📐 {THONG_TIN_NHOM.monHoc}</div>
+          {/* SỬA 1: tên trường */}
+          <div className="badge-truong">ĐẠI HỌC BÁCH KHOA – ĐHQG TP.HCM</div>
+          {/* SỬA 3: góc phải đổi thành Nhóm 24 */}
+          <div className="badge-mon">👥 Nhóm 24</div>
         </div>
         <div className="header-title-wrap">
           <div className="matrix-icon">W</div>
@@ -131,15 +133,15 @@ function App() {
       </header>
 
       <main className="main">
+        {/* SỬA 2: thu nhỏ các bước */}
         <section className="section">
           <h2 className="section-title">⚙️ Thuật Toán Wigner Community Detection</h2>
           <div className="buoc-wrap">
             {CAC_BUOC.map((buoc) => (
-              <div key={buoc.so} className={`buoc-card ${buocHienTai >= buoc.so ? 'buoc-xong' : ''} ${buocHienTai === buoc.so && trangThai === 'dang_xu_ly' ? 'buoc-dang' : ''}`}>
-                <div className="buoc-so">{buocHienTai >= buoc.so ? '✓' : buoc.so}</div>
+              <div key={buoc.so} className={`buoc-card buoc-nho ${buocHienTai >= buoc.so ? 'buoc-xong' : ''} ${buocHienTai === buoc.so && trangThai === 'dang_xu_ly' ? 'buoc-dang' : ''}`}>
+                <div className="buoc-so buoc-so-nho">{buocHienTai >= buoc.so ? '✓' : buoc.so}</div>
                 <div className="buoc-noi-dung">
-                  <div className="buoc-ten">Bước {buoc.so}: {buoc.ten}</div>
-                  <div className="buoc-mo-ta">{buoc.mo_ta}</div>
+                  <div className="buoc-ten">{buoc.so}. {buoc.ten}</div>
                 </div>
               </div>
             ))}
@@ -248,6 +250,7 @@ function App() {
           </>
         )}
 
+        {/* SỬA 4: danh sách thành viên dạng bảng vô hình */}
         <section className="section">
           <h2 className="section-title">👥 Danh Sách Thành Viên Nhóm</h2>
           <div className="thanh-vien-list">
