@@ -654,18 +654,18 @@ body {
   width: 40px;
 }
 
-.thanh-vien-row .tv-so {
+.thanh-vien-row .tv-ten {
   display: table-cell;
-  padding: 0.45rem 1rem 0.45rem 0;
-  font-family: var(--mono);
-  color: var(--xanh2);
-  font-weight: 600;
-  width: 40px;
+  padding: 0.45rem 1rem 0.45rem 2rem;
+  color: var(--trang);
+  font-weight: 500;
+  font-size: 0.88rem;
+  width: 50%;
 }
 
 .thanh-vien-row .tv-mssv {
   display: table-cell;
-  padding: 0.45rem 0;
+  padding: 0.45rem 0 0.45rem 2rem;
   font-family: var(--mono);
   color: var(--xam);
   font-size: 0.8rem;
